@@ -9,7 +9,8 @@
 <body>
   <app-welcome></app-welcome>
   <h2 class="title">Homepage</h2>
-  <table class="table table-striped">
+  <h1 *ngIf="inventors.length == 0">Loading ...</h1>
+  <table class="table table-striped" *ngIf="inventors && inventors.length > 0">
     <thead>
       <th>#</th>
       <th>First</th>
