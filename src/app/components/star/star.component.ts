@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-star',
@@ -6,8 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./star.component.css']
 })
 export class StarComponent implements OnInit {
-
-  constructor() { }
+  @Input() rate: number = 0;
+  
+  constructor() {
+    // this.starNumber = Array(this.rate).fill()
+   }
 
   ngOnInit(): void {
   }

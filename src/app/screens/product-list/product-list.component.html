@@ -16,7 +16,10 @@
                 <img [src]="item.image" width="70" class="img-thumbnail">
             </td>
             <td>{{item.price}}</td>
-            <td>{{item.star}}</td>
+            <!-- <td>{{item.star}}</td> -->
+            <td>
+                <app-star [rate]="item.star"></app-star>
+            </td>
         </tr>
     </tbody>
 </table>

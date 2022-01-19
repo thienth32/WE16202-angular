@@ -9,6 +9,7 @@ import { ProductListComponent } from './screens/product-list/product-list.compon
 import { ProductDetailComponent } from './screens/product-detail/product-detail.component';
 import { StarComponent } from './components/star/star.component';
 import { AgePipe } from './pipes/age.pipe';
+import { NumberArrayPipe } from './pipes/number-array.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AgePipe } from './pipes/age.pipe';
     ProductListComponent,
     ProductDetailComponent,
     StarComponent,
-    AgePipe
+    AgePipe,
+    NumberArrayPipe
   ],
   imports: [
     BrowserModule,
