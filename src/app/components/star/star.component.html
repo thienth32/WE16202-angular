@@ -1,4 +1,4 @@
-<span *ngFor="let key of rate | numberArray">
-    <i class="fas fa-star"></i>
+<span *ngFor="let key of 5 | numberArray">
+    <i [ngClass]="key < rate ? 'fas fa-star' : 'far fa-star'"></i>
 </span>
 

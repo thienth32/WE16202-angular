@@ -9,7 +9,6 @@ export class StarComponent implements OnInit {
   @Input() rate: number = 0;
   
   constructor() {
-    // this.starNumber = Array(this.rate).fill()
    }
 
   ngOnInit(): void {

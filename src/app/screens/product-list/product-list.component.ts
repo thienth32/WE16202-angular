@@ -28,7 +28,7 @@ export class ProductListComponent implements OnInit {
       name: "Samsung Z-Flip",
       price: 25000000,
       image: "https://hoanghamobile.com/tin-tuc/wp-content/uploads/2020/07/galaxy-z-flip-2-concept-1.png",
-      star: 5
+      star: 2
     },
   ]
 
