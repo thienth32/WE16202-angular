@@ -18,7 +18,7 @@
             <td>{{item.price}}</td>
             <!-- <td>{{item.star}}</td> -->
             <td>
-                <app-star [rate]="item.star"></app-star>
+                <app-star [productId]="item.id" [rate]="item.star" (voted)="updateProductStart($event)"></app-star>
             </td>
         </tr>
     </tbody>
