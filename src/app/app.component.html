@@ -7,8 +7,8 @@
   <title>WE16202 - Angular</title>
 </head>
 <body>
-  <app-welcome></app-welcome>
-  <h2 class="title">Homepage</h2>
+  <!-- <app-welcome></app-welcome>
+  <h2 class="title">Homepage </h2>
   <h1 *ngIf="inventors.length == 0">Loading ...</h1>
   <table class="table table-striped" *ngIf="inventors && inventors.length > 0">
     <thead>
@@ -16,6 +16,7 @@
       <th>First</th>
       <th>Last</th>
       <th>Year</th>
+      <th>Year old</th>
       <th>Passed</th>
     </thead>
     <tbody>
@@ -24,10 +25,15 @@
         <td>{{item.first}}</td>
         <td>{{item.last}}</td>
         <td>{{item.year}}</td>
+        <td>{{item.year | age: [item.passed]}}</td>
         <td>{{item.passed}}</td>
       </tr>
     </tbody>
-  </table>
+  </table> -->
+  <div class="container">
+    <h2>WE16202 - Angular layout</h2>
+    <router-outlet></router-outlet>
+  </div>
   
 </body>
 </html>
