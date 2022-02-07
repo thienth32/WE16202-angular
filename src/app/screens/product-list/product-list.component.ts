@@ -36,7 +36,7 @@ export class ProductListComponent implements OnInit {
   }
 
   updateProductStart(voteChanged:any){
-    let item = this.products.find(x => x.id == voteChanged.id);
+      let item = this.products.find(x => x.id == voteChanged.id);
     if(item != undefined){
       item.star = voteChanged.star;
     }
