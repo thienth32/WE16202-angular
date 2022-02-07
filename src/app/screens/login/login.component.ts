@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit {
   }
 
   submitLogin(){
+    // xử lý 1 logic nào đó trước khi chuyển trang
     this.router.navigate(['dashboard']);
   }
 
