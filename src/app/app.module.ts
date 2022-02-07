@@ -12,6 +12,7 @@ import { AgePipe } from './pipes/age.pipe';
 import { NumberArrayPipe } from './pipes/number-array.pipe';
 import { LoginComponent } from './screens/login/login.component';
 import { DashboardComponent } from './screens/dashboard/dashboard.component';
+import { ProjectListComponent } from './screens/project-list/project-list.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { DashboardComponent } from './screens/dashboard/dashboard.component';
     AgePipe,
     NumberArrayPipe,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    ProjectListComponent
   ],
   imports: [
     BrowserModule,

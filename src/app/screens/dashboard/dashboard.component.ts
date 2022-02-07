@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
+  totalProject = Math.floor(Math.random() * 101);
+  totalMember = Math.floor(Math.random() * 101);
+  completedTask = Math.floor(Math.random() * 1000);
+  doingTask = Math.floor(Math.random() * 1000);
   constructor() { }
 
   ngOnInit(): void {
