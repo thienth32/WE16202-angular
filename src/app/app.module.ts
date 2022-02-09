@@ -13,6 +13,8 @@ import { NumberArrayPipe } from './pipes/number-array.pipe';
 import { LoginComponent } from './screens/login/login.component';
 import { DashboardComponent } from './screens/dashboard/dashboard.component';
 import { ProjectListComponent } from './screens/project-list/project-list.component';
+import { AuthService } from './services/auth.service';
+import { AuthGuard } from './guard/auth.guard';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,10 @@ import { ProjectListComponent } from './screens/project-list/project-list.compon
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    AuthService,
+    AuthGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
