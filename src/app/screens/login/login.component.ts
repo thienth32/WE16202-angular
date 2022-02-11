@@ -16,6 +16,9 @@ export class LoginComponent implements OnInit {
 
   submitLoginForm(f: NgForm){
     console.log(f.value);
+    localStorage.setItem('token', f.value.email);
+    this.router.navigate(['dashboard']);
+
   }
 
 }

@@ -4,6 +4,7 @@ import { AuthGuard } from './guard/auth.guard';
 import { DashboardComponent } from './screens/dashboard/dashboard.component';
 import { LoginComponent } from './screens/login/login.component';
 import { ProductListComponent } from './screens/product-list/product-list.component';
+import { ProjectAddComponent } from './screens/project-add/project-add.component';
 import { ProjectListComponent } from './screens/project-list/project-list.component';
 import { WelcomeComponent } from './screens/welcome/welcome.component';
 
@@ -24,7 +25,11 @@ const routes: Routes = [
   },
   {
     path: 'du-an',
-    component: ProjectListComponent
+    component: ProjectListComponent,
+  },
+  {
+    path: 'du-an/them-moi',
+    component: ProjectAddComponent
   }
 ];
 
