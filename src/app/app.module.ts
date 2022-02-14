@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {HttpClientModule} from "@angular/common/http";
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -16,6 +17,7 @@ import { ProjectListComponent } from './screens/project-list/project-list.compon
 import { AuthService } from './services/auth.service';
 import { AuthGuard } from './guard/auth.guard';
 import { ProjectAddComponent } from './screens/project-add/project-add.component';
+import { AddUserComponent } from './screens/add-user/add-user.component';
 
 @NgModule({
   declarations: [
@@ -29,13 +31,15 @@ import { ProjectAddComponent } from './screens/project-add/project-add.component
     LoginComponent,
     DashboardComponent,
     ProjectListComponent,
-    ProjectAddComponent
+    ProjectAddComponent,
+    AddUserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
     AuthService,
