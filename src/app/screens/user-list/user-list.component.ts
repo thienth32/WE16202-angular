@@ -18,7 +18,7 @@ export class UserListComponent implements OnInit {
   }
 
   removeUser(id: number){
-    this.http.delete<any>(`http://localhost:3000/users/${id}`).subscribe(() => {
+    this.userService.remove(id).subscribe(() => {
       this.users = this.users.filter(item => item.id != id);
     })
   }

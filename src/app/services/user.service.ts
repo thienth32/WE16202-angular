@@ -13,4 +13,8 @@ export class UserService {
   getUsers(searchParams: String = ""): Observable<any> {
     return this.http.get<any>(`${environment.userApiUrl}${searchParams}`);
   }
+
+  remove(id: number): Observable<any>{
+    return this.http.delete<any>(`${environment.userApiUrl}/${id}`);
+  }
 }

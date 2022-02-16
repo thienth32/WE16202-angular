@@ -5,12 +5,6 @@
       "name": "Nguyễn Văn Nam",
       "email": "namnv@fpt.edu.vn",
       "password": "123456"
-    },
-    {
-      "id": 3,
-      "name": "Lê Trọng Đạt",
-      "email": "dat.covid@fpt.edu.vn",
-      "password": "123456"
     }
   ]
 }

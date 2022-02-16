@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -14,8 +13,8 @@ export class DashboardComponent implements OnInit {
   completedTask = Math.floor(Math.random() * 1000);
   doingTask = Math.floor(Math.random() * 1000);
   userList: Array<any> = [];
-  apiUrl = "http://localhost:3000/users";
-  constructor(private http: HttpClient, private userService: UserService) { }
+  
+  constructor( private userService: UserService) { }
 
   ngOnInit(): void {
     this.userService.getUsers().subscribe(data => {
@@ -25,7 +24,7 @@ export class DashboardComponent implements OnInit {
   }
 
   removeUser(id: number){
-    this.http.delete<any>(`${this.apiUrl}/${id}`).subscribe(() => {
+    this.userService.remove(id).subscribe(() => {
       this.userList = this.userList.filter(item => item.id != id);
       this.totalMember = this.userList.length;
     })
