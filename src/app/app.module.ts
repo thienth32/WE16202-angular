@@ -18,6 +18,7 @@ import { AuthService } from './services/auth.service';
 import { AuthGuard } from './guard/auth.guard';
 import { ProjectAddComponent } from './screens/project-add/project-add.component';
 import { AddUserComponent } from './screens/add-user/add-user.component';
+import { UserListComponent } from './screens/user-list/user-list.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { AddUserComponent } from './screens/add-user/add-user.component';
     DashboardComponent,
     ProjectListComponent,
     ProjectAddComponent,
-    AddUserComponent
+    AddUserComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,

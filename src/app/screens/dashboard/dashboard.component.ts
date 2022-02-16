@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -14,10 +15,10 @@ export class DashboardComponent implements OnInit {
   doingTask = Math.floor(Math.random() * 1000);
   userList: Array<any> = [];
   apiUrl = "http://localhost:3000/users";
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private userService: UserService) { }
 
   ngOnInit(): void {
-    this.http.get<any>(this.apiUrl).subscribe(data => {
+    this.userService.getUsers().subscribe(data => {
       this.userList = data;
       this.totalMember = data.length;
     })
