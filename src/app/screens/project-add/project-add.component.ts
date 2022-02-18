@@ -11,6 +11,7 @@ import { ProjectService } from 'src/app/services/project.service';
 export class ProjectAddComponent implements OnInit {
   projectForm = new FormGroup({
     name: new FormControl(null, Validators.required),
+    code: new FormControl(null, Validators.required),
     date_start: new FormControl(),
     team_size: new FormControl(null, [
       Validators.required, 

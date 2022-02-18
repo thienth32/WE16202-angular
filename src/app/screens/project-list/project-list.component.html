@@ -32,6 +32,7 @@
                     <tr>
                         <th>#</th>
                         <th>Tên</th>
+                        <th>Mã dự án</th>
                         <th>Thành viên</th>
                         <th>Ngày bắt đầu</th>
                         <th>
@@ -43,6 +44,7 @@
                     <tr *ngFor="let pr of projects">
                         <td scope="row">{{pr.id}}</td>
                         <td>{{pr.name}}</td>
+                        <td>{{pr.code}}</td>
                         <td>{{pr.team_size}}</td>
                         <td>{{pr.date_start}}</td>
                         <td>

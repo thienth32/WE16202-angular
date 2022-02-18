@@ -10,9 +10,17 @@
   "projects": [
     {
       "name": "Website bán đồ ăn nhanh",
+      "code": "WEBFF",
       "date_start": "2022-02-25",
       "team_size": 5,
       "id": 1
+    },
+    {
+      "name": "Ứng dụng Tiktok",
+      "code": "TIK",
+      "date_start": "2022-02-22",
+      "team_size": 20,
+      "id": 2
     }
   ]
 }
