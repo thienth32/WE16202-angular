@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { ProjectService } from 'src/app/services/project.service';
 
 @Component({
   selector: 'app-project-add',
@@ -15,12 +17,15 @@ export class ProjectAddComponent implements OnInit {
       Validators.min(0)
     ])
   });
-  constructor() { }
+  constructor(private projectService: ProjectService, private route: Router) { }
 
   ngOnInit(): void {
   }
 
   submitForm(){
     console.log(this.projectForm.value);
+    this.projectService.saveAdd(this.projectForm.value).subscribe(response => {
+      this.route.navigate(['/du-an']);
+    });
   }
 }

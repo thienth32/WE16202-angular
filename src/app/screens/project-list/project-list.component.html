@@ -31,9 +31,9 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Mã dự án</th>
                         <th>Tên</th>
                         <th>Thành viên</th>
+                        <th>Ngày bắt đầu</th>
                         <th>
                             <a href="" class="btn btn-sm btn-success">Tạo mới</a>
                         </th>
@@ -42,9 +42,9 @@
                 <tbody>
                     <tr *ngFor="let pr of projects">
                         <td scope="row">{{pr.id}}</td>
-                        <td>{{pr.code}}</td>
                         <td>{{pr.name}}</td>
-                        <td>{{pr.members}}</td>
+                        <td>{{pr.team_size}}</td>
+                        <td>{{pr.date_start}}</td>
                         <td>
                             <a href="" class="btn btn-sm btn-info">Sửa</a>
                             &nbsp;
