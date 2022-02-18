@@ -6,6 +6,7 @@ import { DashboardComponent } from './screens/dashboard/dashboard.component';
 import { LoginComponent } from './screens/login/login.component';
 import { ProductListComponent } from './screens/product-list/product-list.component';
 import { ProjectAddComponent } from './screens/project-add/project-add.component';
+import { ProjectEditComponent } from './screens/project-edit/project-edit.component';
 import { ProjectListComponent } from './screens/project-list/project-list.component';
 import { UserListComponent } from './screens/user-list/user-list.component';
 import { WelcomeComponent } from './screens/welcome/welcome.component';
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     path: 'du-an/them-moi',
     component: ProjectAddComponent
+  },
+  {
+    path: 'du-an/cap-nhat/:projectId',
+    component: ProjectEditComponent
   },
   {
     path: 'admin/tai-khoan',

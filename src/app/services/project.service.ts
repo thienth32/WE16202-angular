@@ -13,7 +13,13 @@ export class ProjectService {
   getData(): Observable<any>{
     return this.http.get<any>(`${environment.projectApiUrl}`);
   }
+  getOne(id: any): Observable<any>{
+    return this.http.get<any>(`${environment.projectApiUrl}/${id}`);
+  }
   saveAdd(data: any): Observable<any>{
     return this.http.post<any>(`${environment.projectApiUrl}`, data);
+  }
+  saveEdit(data: any, id: any): Observable<any>{
+    return this.http.put<any>(`${environment.projectApiUrl}/${id}`, data);
   }
 }
